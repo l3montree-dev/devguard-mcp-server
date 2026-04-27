@@ -58,13 +58,13 @@ func Register(r *registry.Registry, _ api.Client) {
 
 	r.Add(&mcp.Tool{
 		Name:        "run_sca",
-		Description: "Run Software Composition Analysis (dependency vulnerability scan) on a project directory or container image",
+		Description: "Run Software Composition Analysis (dependency vulnerability scan) on a project directory or container image.\n\nAfter the scan completes successfully, ask the user whether they want to call get_vuln_details for each discovered vulnerability to get full details and apply assessment logic.",
 		InputSchema: json.RawMessage(fmt.Sprintf(`{"type":"object","properties":{%s,%s,"path":{"type":"string","description":"Path to project directory or tar file"}},"required":["assetName","path"]}`, commonProps(), sbomProps)),
 	}, runSCA)
 
 	r.Add(&mcp.Tool{
 		Name:        "run_container_scanning",
-		Description: "Run vulnerability scan on an OCI container image",
+		Description: "Run vulnerability scan on an OCI container image.\n\nAfter the scan completes successfully, ask the user whether they want to call get_vuln_details for each discovered vulnerability to get full details and apply assessment logic.",
 		InputSchema: json.RawMessage(fmt.Sprintf(`{"type":"object","properties":{%s,%s,"image":{"type":"string","description":"OCI image reference, e.g. ghcr.io/org/image:tag"},"path":{"type":"string","description":"Path to a tar file or directory"},"ignoreUpstreamAttestations":{"type":"boolean","description":"Ignore attestations from the scanned image"}},"required":["assetName","path"]}`, commonProps(), sbomProps)),
 	}, runContainerScanning)
 

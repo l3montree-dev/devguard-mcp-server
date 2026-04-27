@@ -106,19 +106,26 @@ Add the server to your project or user config via the Claude Code CLI:
 claude mcp add devguard /path/to/devguard-mcp -e DEVGUARD_PAT=your-pat-here
 ```
 
-Or add it to `.claude/settings.json` manually:
+Or add it manually to `~/.claude.json` in your user directory:
 
 ```json
 {
   "mcpServers": {
     "devguard": {
-      "command": "/path/to/devguard-mcp-*"
+      "command": "/path/to/devguard-mcp-*",
       "env": {
-        "DEVGUARD_PAT": "your-pat-here"
+        "DEVGUARD_PAT": "your-pat-here",
+        "DEVGUARD_API_URL": "https://your-self-hosted-instance/api/v1"
       }
     }
   }
 }
 ```
 
-The tools will be available in your next Claude Code session.
+To verify the server was added successfully, run:
+
+```bash
+claude mcp list
+```
+
+You should see `devguard` listed. The tools will be available in your next Claude Code session.
