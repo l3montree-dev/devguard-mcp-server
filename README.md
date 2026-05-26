@@ -1,9 +1,8 @@
 # DevGuard MCP Server
 
-> **⚠️ Proof of Concept**
-> This is an early proof of concept and is not production-ready. It may contain bugs, missing features, and rough edges. It is intended for experimentation and feedback only — not for production use.
->
-> We welcome your thoughts and feedback in the [GitHub Discussion](https://github.com/l3montree-dev/devguard/discussions/1906).
+> [!WARNING]  
+> **Proof of Concept** This integration is not yet production-ready. It is intended for experimentation and feedback only. Share your thoughts in the [GitHub Discussion](https://github.com/l3montree-dev/devguard/discussions/1906).
+
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that connects Claude and other MCP-compatible AI assistants to the [DevGuard](https://devguard.org) security platform.
 
@@ -26,6 +25,9 @@ It lets your AI assistant scan repositories for vulnerabilities, manage security
 - Upload SBOM, SARIF, and VEX documents
 - List and assess vulnerabilities with detailed CVE/CVSS/EPSS data
 - Accept risks or mark findings as false positives with justification
+
+> [!WARNING]  
+> **Use with caution in production projects.** AI assistants can make mistakes  especially when assessing vulnerabilities. Any risk acceptance, false-positive marking, or finding management done through the MCP server should be reviewed by a human before it is treated as final. We strongly recommend against letting an AI assistant make security decisions in production environments without human review.
 
 ## Requirements
 
