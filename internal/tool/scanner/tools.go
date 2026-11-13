@@ -11,10 +11,10 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"mcp-server/internal/api"
-	"mcp-server/internal/config"
-	"mcp-server/internal/tool/helpers"
-	"mcp-server/internal/tool/registry"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/api"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/config"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/helpers"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/registry"
 )
 
 var configPAT string

@@ -7,14 +7,14 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"mcp-server/internal/api"
-	"mcp-server/internal/config"
-	"mcp-server/internal/tool/asset"
-	"mcp-server/internal/tool/org"
-	"mcp-server/internal/tool/project"
-	"mcp-server/internal/tool/registry"
-	"mcp-server/internal/tool/scanner"
-	"mcp-server/internal/tool/vuln"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/api"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/config"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/asset"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/org"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/project"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/registry"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/scanner"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/vuln"
 )
 
 func main() {

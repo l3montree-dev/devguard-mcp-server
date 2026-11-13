@@ -7,9 +7,9 @@ import (
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
-	"mcp-server/internal/api"
-	"mcp-server/internal/tool/helpers"
-	"mcp-server/internal/tool/registry"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/api"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/helpers"
+	"github.com/l3montree-dev/devguard-mcp-server/internal/tool/registry"
 )
 
 const vulnEventInputSchema = `{"type":"object","properties":{"organization":{"type":"string","description":"Organization slug"},"project":{"type":"string","description":"Project slug"},"asset":{"type":"string","description":"Asset slug"},"assetVersion":{"type":"string","description":"Asset version slug (branch or tag ref, e.g. 'main')"},"vulnType":{"type":"string","enum":["dependency","first-party"],"description":"Type of vulnerability: 'dependency' for dependency vulnerabilities or 'first-party' for first-party vulnerabilities"},"vulnID":{"type":"string","description":"Vulnerability ID (UUID)"},"justification":{"type":"string","description":"Justification text for the status change. Supports Markdown formatting (headings, bullet lists, code blocks, bold/italic). Write a clear, structured explanation of the reasoning."}},"required":["organization","project","asset","assetVersion","vulnType","vulnID"]}`
